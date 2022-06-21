@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:getit/view/home_page.dart';
 
 import 'locator.dart';
+import 'locator_2.dart';
 
 void main() {
   ///3
-  setup();
+  configureDependencies();
   runApp(MyApp());
 }
 

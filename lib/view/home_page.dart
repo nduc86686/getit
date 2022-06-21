@@ -11,7 +11,7 @@ class HomePageView extends StatefulWidget {
 }
 
 class _HomePageViewState extends State<HomePageView> {
-  late Meme visibleMeme;
+   Meme ? visibleMeme;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _HomePageViewState extends State<HomePageView> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "Category ${visibleMeme.category}",
+                    "Category ${visibleMeme!.category}",
                     style: TextStyle(fontSize: 36),
                   ),
                   SizedBox(height: 8),
@@ -35,10 +35,10 @@ class _HomePageViewState extends State<HomePageView> {
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black),
                     ),
-                    child: Image.network(visibleMeme.imageUrl),
+                    child: Image.network(visibleMeme!.imageUrl),
                   ),
                   SizedBox(height: 8),
-                  Text("Caption: ${visibleMeme.caption}"),
+                  Text("Caption: ${visibleMeme!.caption}"),
                 ],
               ),
             ),

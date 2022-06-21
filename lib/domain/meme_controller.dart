@@ -1,8 +1,9 @@
-
+import 'package:injectable/injectable.dart';
 
 import '../locator.dart';
 import '../respository/meme_repo.dart';
 
+@lazySingleton
 class MemeDomainController {
   getNextMeme() async {
     ///5
